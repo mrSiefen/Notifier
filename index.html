@@ -60,7 +60,7 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg" id="main-navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="logo.svg" alt="Notifier Logo"></a>
+      <a class="navbar-brand" href=""><img src="logo.svg" alt="Notifier Logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -171,11 +171,17 @@
 
   </div>
 
+  <footer class="text-center py-3 mt-4">
+    <p>Notifier Master Example &copy; <span id="current-year"></span> by <a href="https://mrsiefensrobotemporium.com/index.html" target="_blank">Mr. Siefen's Robot Emporium</a>. Visit the Notifier <a href="https://github.com/mrSiefen/Notifier" target="_blank">GitHub Repository</a> for more information.</p>
+  </footer>
+
   <!-- Bootstrap 5 Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Include the notifier helper class (non-module version) -->
   <script src="notifier.js"></script>
   <script>
+    // Notifier Master Example Script
+
     (function () {
       // Create a master notifier instance for the spawner and alert type demos.
       var master_notifier = new Notifier({
@@ -256,6 +262,9 @@
           alert("Please create a custom notifier first.");
         }
       });
+
+      // Update the current year in the footer.
+      document.getElementById('current-year').textContent = new Date().getFullYear();
     })();
   </script>
   <script>

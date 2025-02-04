@@ -58,6 +58,10 @@
     </form>
   </div>
 
+  <footer class="text-center py-3 mt-4">
+    <p>Notifier Validation (Non-Module) Example &copy; <span id="current-year"></span> by <a href="https://mrsiefensrobotemporium.com/index.html" target="_blank">Mr. Siefen's Robot Emporium</a>. Visit the Notifier <a href="https://github.com/mrSiefen/Notifier" target="_blank">GitHub Repository</a> for more information.</p>
+  </footer>
+
   <!-- Bootstrap 5 Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Include the notifier helper class (non-module version) -->
@@ -109,6 +113,9 @@
         }
       });
     })();
+
+    // Update the current year in the footer.
+    document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
