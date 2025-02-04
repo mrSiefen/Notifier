@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shipping & Billing Form Validation</title>
+  <!-- Bootswatch Lumen Theme as default -->
+  <link id="theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5/dist/lumen/bootstrap.min.css">
+  <style>
+    body { padding-top: 2rem; }
+    .form-section { margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Shipping &amp; Billing Form</h1>
+    <form id="shipping-billing-form">
+      <fieldset class="form-section">
+        <legend>Shipping Information</legend>
+        <div class="mb-3">
+          <label for="shipping-name" class="form-label">Shipping Name *</label>
+          <input type="text" class="form-control" id="shipping-name" placeholder="Enter your shipping name" >
+        </div>
+        <div class="mb-3">
+          <label for="shipping-address" class="form-label">Shipping Address *</label>
+          <input type="text" class="form-control" id="shipping-address" placeholder="Enter your shipping address" >
+        </div>
+        <div class="mb-3">
+          <label for="shipping-city" class="form-label">Shipping City *</label>
+          <input type="text" class="form-control" id="shipping-city" placeholder="Enter your shipping city" >
+        </div>
+        <div class="mb-3">
+          <label for="shipping-zip" class="form-label">Shipping Zip Code *</label>
+          <input type="text" class="form-control" id="shipping-zip" placeholder="Enter your shipping zip code" >
+        </div>
+      </fieldset>
+      <fieldset class="form-section">
+        <legend>Billing Information</legend>
+        <div class="mb-3">
+          <label for="billing-name" class="form-label">Billing Name *</label>
+          <input type="text" class="form-control" id="billing-name" placeholder="Enter your billing name" >
+        </div>
+        <div class="mb-3">
+          <label for="billing-address" class="form-label">Billing Address *</label>
+          <input type="text" class="form-control" id="billing-address" placeholder="Enter your billing address" >
+        </div>
+        <div class="mb-3">
+          <label for="billing-city" class="form-label">Billing City *</label>
+          <input type="text" class="form-control" id="billing-city" placeholder="Enter your billing city" >
+        </div>
+        <div class="mb-3">
+          <label for="billing-zip" class="form-label">Billing Zip Code *</label>
+          <input type="text" class="form-control" id="billing-zip" placeholder="Enter your billing zip code" >
+        </div>
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Submit Order</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap 5 Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Module Script for Form Validation using Notifier -->
+  <script type="module">
+    import Notifier from './notifier.module.js';
+
+    // Create a notifier instance for form validation messages.
+    const notifier = new Notifier({
+      position: 'top',
+      alignment: 'middle',
+      max_notifications: 3,
+      default_timeout: 4000
+    });
+
+    // Get a reference to the form.
+    const form = document.getElementById('shipping-billing-form');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      // Retrieve and trim values from the form.
+      const shippingName = document.getElementById('shipping-name').value.trim();
+      const shippingAddress = document.getElementById('shipping-address').value.trim();
+      const shippingCity = document.getElementById('shipping-city').value.trim();
+      const shippingZip = document.getElementById('shipping-zip').value.trim();
+      const billingName = document.getElementById('billing-name').value.trim();
+      const billingAddress = document.getElementById('billing-address').value.trim();
+      const billingCity = document.getElementById('billing-city').value.trim();
+      const billingZip = document.getElementById('billing-zip').value.trim();
+
+      // Build an error message for any missing fields.
+      let errors = "";
+      if (!shippingName) errors += "Shipping Name is required. ";
+      if (!shippingAddress) errors += "Shipping Address is required. ";
+      if (!shippingCity) errors += "Shipping City is required. ";
+      if (!shippingZip) errors += "Shipping Zip Code is required. ";
+      if (!billingName) errors += "Billing Name is required. ";
+      if (!billingAddress) errors += "Billing Address is required. ";
+      if (!billingCity) errors += "Billing City is required. ";
+      if (!billingZip) errors += "Billing Zip Code is required. ";
+
+      if (errors) {
+        // Show error notification if any field is missing.
+        notifier.notify(errors, 'danger');
+      } else {
+        // If everything is valid, show a success notification.
+        notifier.notify("Your order has been submitted successfully!", 'success');
+        // Optionally, you can proceed with further submission logic here.
+        // For example: form.submit();
+      }
+    });
+  </script>
+</body>
+</html>
