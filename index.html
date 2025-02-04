@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,30 +8,43 @@
   <!-- Bootswatch Lumen Theme as default -->
   <link id="theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5/dist/lumen/bootstrap.min.css">
   <style>
-    .section { margin-bottom: 2rem; }
-    .section h2 { margin-top: 1.5rem; }
-    pre { padding: 1rem; }
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section h2 {
+      margin-top: 1.5rem;
+    }
+
+    pre {
+      padding: 1rem;
+    }
+
     /* Navbar styling based on theme */
     /* Light theme navbar */
     [data-bs-theme="light"] .navbar {
       background-color: #f8f9fa !important;
       color: #000;
     }
+
     [data-bs-theme="light"] .navbar .navbar-brand,
     [data-bs-theme="light"] .navbar .nav-link,
     [data-bs-theme="light"] .navbar .btn {
       color: #000 !important;
     }
+
     /* Dark theme navbar */
     [data-bs-theme="dark"] .navbar {
       background-color: #343a40 !important;
       color: #fff;
     }
+
     [data-bs-theme="dark"] .navbar .navbar-brand,
     [data-bs-theme="dark"] .navbar .nav-link,
     [data-bs-theme="dark"] .navbar .btn {
       color: #fff !important;
     }
+
     /* Dark stylings for form elements */
     [data-bs-theme="dark"] .form-select,
     [data-bs-theme="dark"] .form-control,
@@ -40,26 +54,29 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg" id="main-navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Notifier Master</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-         <ul class="navbar-nav me-auto">
-           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="example_validation.html">Validation Example</a></li>
-           <li class="nav-item"><a class="nav-link" href="example_validation_module.html">Validation Module Example</a></li>
-         </ul>
-         <div class="d-flex">
-           <a href="https://github.com/yourusername/notifier" target="_blank" class="btn me-2">GitHub</a>
-           <select id="theme-selector" class="form-select me-2" style="max-width:200px;"></select>
-           <button id="dark-mode-toggle" class="btn">Dark Mode</button>
-         </div>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="example_validation.html">Validation Example</a></li>
+          <li class="nav-item"><a class="nav-link" href="example_validation_module.html">Validation Module Example</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="crazy_example.html">Crazy Example</a></li>
+        </ul>
+        <div class="d-flex">
+          <a href="https://github.com/yourusername/notifier" target="_blank" class="btn me-2">GitHub</a>
+          <select id="theme-selector" class="form-select me-2" style="max-width:200px;"></select>
+          <button id="dark-mode-toggle" class="btn">Dark Mode</button>
+        </div>
       </div>
     </div>
   </nav>
@@ -68,20 +85,24 @@
   <div class="container my-4">
     <h1>Notifier Master Example</h1>
     <p>
-      This demo showcases all features of the Notifier helper class, including spawning notifications, using different alert types,
-      interactive documentation tips, and creating custom notifier configurations. Use the controls below to experiment with every feature. 
-      NOTE: Notifier is designed to work with Bootstrap 5 and supports Bootswatch themes. Use the dropdown to switch themes and the button to toggle dark mode.
+      This demo showcases all features of the Notifier helper class, including spawning notifications, using different
+      alert types,
+      interactive documentation tips, and creating custom notifier configurations. Use the controls below to experiment
+      with every feature.
+      NOTE: Notifier is designed to work with Bootstrap 5 and supports Bootswatch themes. Use the dropdown to switch
+      themes and the button to toggle dark mode.
     </p>
-    
+
     <!-- Section: Spawner Demo -->
     <div class="section" id="spawner-demo">
       <h2>Spawner Demo</h2>
-      <p>The buttons below demonstrate spawning notifications in rapid succession, as well as a manual notification (with no auto‑dismiss).</p>
+      <p>The buttons below demonstrate spawning notifications in rapid succession, as well as a manual notification
+        (with no auto‑dismiss).</p>
       <button id="spawn-notifs" class="btn btn-primary me-2">Spawn 5 Notifications</button>
       <button id="spawn-manual" class="btn btn-danger me-2">Spawn Manual (No Timeout)</button>
       <button id="clear-notifs" class="btn btn-secondary">Clear Notifications</button>
     </div>
-    
+
     <!-- Section: All Alert Types -->
     <div class="section" id="all-alerts">
       <h2>All Alert Types</h2>
@@ -95,11 +116,12 @@
       <button id="alert-warning" class="btn btn-warning me-2">Warning</button>
       <button id="alert-danger" class="btn btn-danger me-2">Danger</button>
     </div>
-    
+
     <!-- Section: Interactive Documentation -->
     <div class="section" id="doc-demo">
       <h2>Interactive Documentation</h2>
-      <p>Below is an example code snippet for creating a Notifier instance. Click the buttons to see additional usage tips.</p>
+      <p>Below is an example code snippet for creating a Notifier instance. Click the buttons to see additional usage
+        tips.</p>
       <pre><code>var notifier_instance = new Notifier({
   position: 'top',
   alignment: 'right',
@@ -110,7 +132,7 @@
       <button id="doc-add" class="btn btn-success me-2">Show Add Notification Tip</button>
       <button id="doc-clear" class="btn btn-warning">Clear Notifications</button>
     </div>
-    
+
     <!-- Section: Custom Notifier Configuration -->
     <div class="section" id="custom-config">
       <h2>Custom Notifier Configuration</h2>
@@ -144,7 +166,7 @@
       <button id="custom-notify" class="btn btn-secondary">Spawn Custom Notification</button>
       <div id="custom-output" class="mt-2"></div>
     </div>
-    
+
   </div>
 
   <!-- Bootstrap 5 Bundle with Popper -->
@@ -186,8 +208,8 @@
 
       // All Alert Types demo.
       var alertTypes = ['primary', 'secondary', 'light', 'dark', 'info', 'success', 'warning', 'danger'];
-      alertTypes.forEach(function(type) {
-        document.getElementById("alert-" + type).addEventListener("click", function() {
+      alertTypes.forEach(function (type) {
+        document.getElementById("alert-" + type).addEventListener("click", function () {
           master_notifier.notify("This is a " + type + " notification.", type);
         });
       });
@@ -236,7 +258,7 @@
   </script>
   <script>
     // Theme picker and dark mode.
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       fetch("https://bootswatch.com/api/5.json")
         .then(response => response.json())
         .then(data => {
@@ -254,12 +276,12 @@
         })
         .catch(error => console.error("Error fetching themes:", error));
 
-      document.getElementById("theme-selector").addEventListener("change", function() {
+      document.getElementById("theme-selector").addEventListener("change", function () {
         document.getElementById("theme-css").href = this.value;
       });
 
       var darkModeToggle = document.getElementById("dark-mode-toggle");
-      darkModeToggle.addEventListener("click", function() {
+      darkModeToggle.addEventListener("click", function () {
         var htmlEl = document.documentElement;
         var currentTheme = htmlEl.getAttribute("data-bs-theme");
         if (currentTheme === "light") {
@@ -273,4 +295,5 @@
     });
   </script>
 </body>
+
 </html>
