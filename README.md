@@ -2,6 +2,8 @@
 
 **Notifier Helper Class** is a lightweight JavaScript helper that makes it easy to display Bootstrap notifications on your web pages. It supports both module and non-module usage, allows for flexible configuration, and integrates seamlessly with Bootswatch themes and dark/light mode toggling.
 
+**Demo Pages: [Master Demo](https://mrsiefen.github.io/Notifier/index.html)
+
 ## Features
 
 - **Simple API:**  
@@ -30,11 +32,14 @@
 - **index.html**  
   A master demo page that combines examples, documentation, and custom configuration. This page lets users experiment with every feature of the Notifier class.
 
-- **example_spawner.html**  
-  A demo page focusing on spawning notifications, theme switching via Bootswatch, and toggling dark/light mode.
+- **example_validation.html**  
+  A demo page that showcases how to use the Notifier class for form validation. NON-MODULE VERSION.
 
-- **example_doc.html**  
-  An interactive documentation page with code samples and buttons that trigger usage tip notifications.
+- **example_validation.module.html**  
+  A demo page that showcases how to use the Notifier class for form validation. MODULE VERSION.
+
+- **crazy_example.html**  
+  A demo page that showcases spawning notifications in all containers at once. NON-MODULE VERSION.
 
 ## Installation
 
@@ -80,13 +85,14 @@ The project integrates with Bootswatch 5 themes. In the master demo, a dropdown 
 ## Examples
 
 - **Master Demo:**  
-  [index.html](index.html) – Combines spawner, interactive documentation, and custom configuration examples with theme support.
+  [index.html](https://mrsiefen.github.io/Notifier/) – Combines spawner, interactive documentation, and custom configuration examples with theme support.
 
-- **Spawner Demo:**  
-  [example_spawner.html](example_spawner.html) – Focuses on spawning notifications with a variety of alert types and theme switching.
+- **Form Validation:**  
+  [example_validation.html](https://mrsiefen.github.io/Notifier/example_validation.html) – Demonstrates how to use the Notifier class for form validation. NON-MODULE VERSION.
+  [example_validation.module.html](https://mrsiefen.github.io/Notifier/example_validation_module.html) – Demonstrates how to use the Notifier class for form validation. MODULE VERSION.
 
-- **Documentation Example:**  
-  [example_doc.html](example_doc.html) – Provides interactive documentation that explains how to use the Notifier helper class.
+- **Crazy Example:**
+  [crazy_example.html](https://mrsiefen.github.io/Notifier/crazy_example.html) – Spawns notifications in all containers at once. NON-MODULE VERSION.
 
 ## License
 
