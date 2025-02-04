@@ -16,7 +16,7 @@
   Notifications automatically dismiss after a configurable timeout unless specified to remain until closed manually.
 
 - **Responsive Design:**  
-  The notification container adjusts its positioning for smaller screens.
+  The notification container adjusts its positioning to MIDDLE for smaller screens.
 
 - **Module & Non‑Module Support:**  
   Use the helper as a global script (non‑module) or import it as an ES module.
