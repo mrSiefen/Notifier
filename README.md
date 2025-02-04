@@ -88,10 +88,10 @@ The project integrates with Bootswatch 5 themes. In the master demo, a dropdown 
   [index.html](https://mrsiefen.github.io/Notifier/) – Combines spawner, interactive documentation, and custom configuration examples with theme support.
 
 - **Form Validation:**  
-  [example_validation.html](https://mrsiefen.github.io/Notifier/example_validation.html) – Demonstrates how to use the Notifier class for form validation. NON-MODULE VERSION.
-  [example_validation.module.html](https://mrsiefen.github.io/Notifier/example_validation_module.html) – Demonstrates how to use the Notifier class for form validation. MODULE VERSION.
+  - [example_validation.html](https://mrsiefen.github.io/Notifier/example_validation.html) – Demonstrates how to use the Notifier class for form validation. NON-MODULE VERSION.
+  - [example_validation.module.html](https://mrsiefen.github.io/Notifier/example_validation_module.html) – Demonstrates how to use the Notifier class for form validation. MODULE VERSION.
 
-- **Crazy Example:**
+- **Crazy Example:**  
   [crazy_example.html](https://mrsiefen.github.io/Notifier/crazy_example.html) – Spawns notifications in all containers at once. NON-MODULE VERSION.
 
 ## License
